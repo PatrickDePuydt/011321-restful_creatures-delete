@@ -1,0 +1,12 @@
+<h3>It's Dino Time!</h3>
+<h4>Who's coming to the Dino party?</h4>
+<ul>
+    <% dinos.forEach((dino, index) => { %>
+    <li>
+        <a href="/dinos/<%= index %>"><strong><%= dino.name %></strong></a>
+        <form method="POST" action="/dinos/<%= index %>?_method=DELETE">
+            <input type="submit" value="Delete">
+        </form>
+    </li>
+    <% }) %>
+</ul>
